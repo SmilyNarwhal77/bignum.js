@@ -60,4 +60,8 @@ class BigNum {
     if(this.deg < 10 && this.deg >= 1) return;
     if(this.deg >= 10) {
       for(let i = 0; i < Math.floor(Math.log10(this.deg)); i++) {
-        
+        this.deg /= 10;
+        this.mag++;
+      };
+
+      
