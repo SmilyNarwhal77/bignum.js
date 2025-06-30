@@ -63,5 +63,16 @@ class BigNum {
         this.deg /= 10;
         this.mag++;
       };
-
+    } else if(this.deg < 1) {
+      for(let i = Math.ceil(Math.log10(this.deg)); i < 1; i++) {
+         if(this.mag > 0) {
+            this.deg *= 10;
+            this.mag--;
+         }else{
+            return
+         }
+      }
+    }
+  }
+}
       
